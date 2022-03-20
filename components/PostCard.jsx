@@ -5,7 +5,7 @@ import Link from 'next/link';
 const PostCard = ({ post }) => (
   <div className="bg-white shadow-lag rounded-lg p-0 lg:p-8 pb-12 mg-8 mb-8">
     <div className="relative overflow-hidden shadow-md pb-80 mb-6">
-      <img 
+      <img
         src={post.featuredImage.url}
         alt={post.title}
         className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
