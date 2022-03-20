@@ -33,7 +33,7 @@ const PostWidget = ({ categories, slug }) => {
             <Link href={`/post/${post.slug}`} key={post.title}>
               {post.title}
             </Link>
-          </div>  
+          </div>
         </div>
       ))}
     </div>
