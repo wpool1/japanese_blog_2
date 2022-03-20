@@ -10,7 +10,7 @@ const PostCard = ({ post }) => (
         alt={post.title}
         className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
       />
-    </div>   
+    </div>
     <h1 className="transition duration-100 text-center text-gray-700 mb-1 cursor-pointer hover:text-yellow-500 text-2xl font-semibold">
       <Link href={`/post/${post.slug}`}>
         {post.title}
