@@ -35,7 +35,7 @@ export const getPosts = async () => {
   `;
 
   const result = await request(graphqlAPI, query);
-
+  console.log(result);
   return result.postsConnection.edges;
 };
 
@@ -50,7 +50,7 @@ export const getCategories = async () => {
   `;
 
   const result = await request(graphqlAPI, query);
-
+  console.log(result);
   return result.categories;
 };
 
@@ -84,7 +84,7 @@ export const getPostDetails = async (slug) => {
   `;
 
   const result = await request(graphqlAPI, query, { slug });
-
+  console.log(result);
   return result.post;
 };
 
@@ -105,7 +105,7 @@ export const getSimilarPosts = async (categories, slug) => {
     }
   `;
   const result = await request(graphqlAPI, query, { slug, categories });
-
+  console.log(result);
   return result.posts;
 };
 
@@ -140,7 +140,7 @@ export const getAdjacentPosts = async (createdAt, slug) => {
   `;
 
   const result = await request(graphqlAPI, query, { slug, createdAt });
-
+  console.log(result);
   return { next: result.next[0], previous: result.previous[0] };
 };
 
@@ -177,7 +177,7 @@ export const getCategoryPost = async (slug) => {
   `;
 
   const result = await request(graphqlAPI, query, { slug });
-
+  console.log(result);
   return result.postsConnection.edges;
 };
 
@@ -202,7 +202,7 @@ export const getFeaturedPosts = async () => {
   `;
 
   const result = await request(graphqlAPI, query);
-
+  console.log(result);
   return result.posts;
 };
 
@@ -214,7 +214,7 @@ export const submitComment = async (obj) => {
     },
     body: JSON.stringify(obj),
   });
-
+  console.log(result);
   return result.json();
 };
 
@@ -230,7 +230,7 @@ export const getComments = async (slug) => {
   `;
 
   const result = await request(graphqlAPI, query, { slug });
-
+  console.log(result);
   return result.comments;
 };
 
@@ -251,6 +251,6 @@ export const getRecentPosts = async () => {
     }
   `;
   const result = await request(graphqlAPI, query);
-
+  console.log(result);
   return result.posts;
 };
