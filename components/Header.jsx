@@ -18,7 +18,7 @@ const Header = () => {
         <div className="md:float-left block">
           <Link href="/">
             <span className="cursor-pointer font-bold text-4xl text-gray-700">
-              千歳晴彦の一石三鳥ブログ
+              千歳春彦の一石三鳥ブログ
             </span>
           </Link>
         </div>
