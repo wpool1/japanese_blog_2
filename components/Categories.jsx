@@ -19,7 +19,7 @@ const Categories = () => {
       </h3>
       {categories.map((category) => (
         <Link key={category.slug} href={`/category/${category.slug}`}>
-          <span className="text-xs cursor-pointer block pb-3 mb-3 hover:text-yellow-500">
+          <span className="text-sm cursor-pointer block pb-3 mb-3 hover:text-yellow-500">
             {category.name}
           </span>
         </Link>

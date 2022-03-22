@@ -27,11 +27,11 @@ const PostWidget = ({ categories, slug }) => {
       {relatedPosts.map((post) => (
         <div key={post.title} className="flex items-center w-full mb-4">
           <div className="flex-grow ml-4">
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-500 text-sm">
               {moment(post.createdAt).format('MMM DD, YYYY')}
             </p>
             <Link href={`/post/${post.slug}`} key={post.title}>
-              <span className="text-xs cursor-pointer block pb-3 mb-3 hover:text-yellow-500">{post.title}</span>
+              <span className="text-sm cursor-pointer block pb-3 mb-3 hover:text-yellow-500">{post.title}</span>
             </Link>
           </div>
         </div>
