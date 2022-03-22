@@ -25,13 +25,13 @@ const PostWidget = ({ categories, slug }) => {
         {slug ? '関連の投稿' : '最近の投稿'}
       </h3>
       {relatedPosts.map((post) => (
-        <div key={post.title} className="flex items-center w-full mb-4 hover:text-yellow-500">
+        <div key={post.title} className="flex items-center w-full mb-4">
           <div className="flex-grow ml-4">
             <p className="text-gray-500 text-xs">
               {moment(post.createdAt).format('MMM DD, YYYY')}
             </p>
             <Link href={`/post/${post.slug}`} key={post.title}>
-              <span className="text-xs">{post.title}</span>
+              <span className="text-xs cursor-pointer block pb-3 mb-3 hover:text-yellow-500">{post.title}</span>
             </Link>
           </div>
         </div>
